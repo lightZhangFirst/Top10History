@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Host History</title>
+    <style>
+        body { min-width: 400px; padding: 10px; font-family: Arial, sans-serif; }
+        h3 { margin-top: 15px; margin-bottom: 5px; font-size: 14px; color: #333; border-bottom: 1px solid #eee; padding-bottom: 3px; }
+        ul { list-style: none; padding: 0; margin: 0; }
+        li { margin-bottom: 4px; font-size: 12px; }
+        a { text-decoration: none; color: #007bff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; max-width: 100%; }
+        a:hover { text-decoration: underline; }
+        #linkContainer { max-height: 500px; overflow-y: auto; }
+        .empty-message { text-align: center; color: #666; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Host History</h2>
+    <div id="linkContainer">
+        <p class="empty-message">loading...</p>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
