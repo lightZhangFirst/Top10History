@@ -5,21 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 从 chrome.storage.local 获取数据
     chrome.storage.local.get(['historyData'], (data) => {
-        console.log("get data", data);
-        const hostLinks = data.historyData || {};
-        const hosts = Object.keys(hostLinks).sort(); // 按 Hostname 排序
+        const hostLinks = data.historyData || [];
+        
 
-        if (hosts.length === 0) {
+        if (hostLinks.length === 0) {
             linkContainer.innerHTML = '<p class="empty-message">there have not history</p>';
             return;
         }
 
-        hosts.forEach(host => {
-            const links = hostLinks[host];
+        hostLinks.forEach(item => {
+            const doamin = item.domain;
+            const links = item.visits;
 
             // 创建 Host 标题
             const hostHeader = document.createElement('h3');
-            hostHeader.textContent = host;
+            hostHeader.textContent = doamin;
             linkContainer.appendChild(hostHeader);
 
             // 创建链接列表
