@@ -20,7 +20,6 @@ loadHistoryData();
 
 // 监听历史记录变化
 chrome.history.onVisited.addListener(async (historyItem) => {
-  console.log("执行历史记录变化监听事件", historyData);
   const url = new URL(historyItem.url);
   const host = url.host;
 
@@ -86,9 +85,4 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     sendResponse({ historyData });
   }
   return true; // 保持消息通道开放
-});
-
-
-chrome.runtime.onInstalled.addListener(() => {
-  console.log('扩展插件已安装');
 });

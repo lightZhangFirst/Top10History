@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Web History Tracker",
+  "name": "Top 10 History",
   "version": "1.0.0",
   "description": "Track browsing history by host with latest 10 URLs per host",
-  "permissions": ["history","storage","activeTab", "scripting","tabs"],
+  "permissions": ["history","storage","activeTab","scripting","tabs"],
   "background": {
     "service_worker": "background.js"
   },

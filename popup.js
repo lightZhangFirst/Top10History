@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Popup script started executing.");
     const linkContainer = document.getElementById('linkContainer');
     linkContainer.innerHTML = ''; // 清空加载中消息
 
